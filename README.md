@@ -3,7 +3,7 @@
 ## how to use:
 To install the cli tool, run: 
 ```Rust
-Cargo install rsa_keygen_cli
+Cargo install rsakeygen
 ```
 
 current options:
