@@ -474,7 +474,6 @@ version = "0.1.0"
 dependencies = [
  "argh",
  "clap",
- "rsa",
  "rsa_keygen",
 ]
 

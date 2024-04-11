@@ -16,8 +16,6 @@ fn main() {
         println!("Generating new seedphrase and keypair \n");
         display_seedphrase_and_keypair();
     }
-    
-
 }
 
 fn display_seedphrase_and_keypair() {
