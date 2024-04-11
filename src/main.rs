@@ -1,6 +1,6 @@
 use clap::{Command, Parser};
 use rsa_keygen::{ generate_seedphrase_and_keypair, pkcs8_pem_from_priv_key, pkcs8_pem_from_pub_key, keypair_from_seedphrase, generate_seedphrase };
-use rsa::{RsaPrivateKey, RsaPublicKey};
+use rsa::{pkcs8::der::zeroize::Zeroize, RsaPrivateKey, RsaPublicKey};
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -60,7 +60,8 @@ fn gen_seedphrase() {
 fn print_keypair(keypair: (RsaPrivateKey, RsaPublicKey)) {
     let (priv_key, pub_key) = keypair;
     let pem_pub_key = pkcs8_pem_from_pub_key(&pub_key).unwrap();
-    let pem_priv_key = pkcs8_pem_from_priv_key(&priv_key).unwrap();
-    println!("{}", pem_priv_key.as_str());
+    let mut pem_priv_key = pkcs8_pem_from_priv_key(&priv_key).unwrap();
+    println!("{}", &pem_priv_key.as_str());
+    pem_priv_key.zeroize();
     println!("{}", pem_pub_key);
 }
