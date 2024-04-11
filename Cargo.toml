@@ -1,0 +1,12 @@
+[package]
+name = "rsakeygen"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+argh = "0.1.12"
+clap = { version = "4.5.4", features = ["derive"]}
+rsa = "0.9.6"
+rsa_keygen = "1.0.6"
