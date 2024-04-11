@@ -1,6 +1,6 @@
 [package]
 name = "rsakeygen"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A cli tool to generate 12 word seedphrase and associating RSA key pairs"
 license = "MIT"
@@ -13,4 +13,5 @@ keywords = ["rsa", "keygen", "cli", "seedphrase"]
 [dependencies]
 argh = "0.1.12"
 clap = { version = "4.5.4", features = ["derive"]}
+rsa = "0.9.6"
 rsa_keygen = "1.0.6"

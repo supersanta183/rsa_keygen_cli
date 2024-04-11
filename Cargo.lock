@@ -470,10 +470,11 @@ dependencies = [
 
 [[package]]
 name = "rsakeygen"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "argh",
  "clap",
+ "rsa",
  "rsa_keygen",
 ]
 
