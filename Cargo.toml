@@ -1,6 +1,6 @@
 [package]
 name = "rsakeygen"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "A cli tool to generate 12 word seedphrase and associating RSA key pairs"
 license = "MIT"
